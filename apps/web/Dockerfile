@@ -1,20 +1,28 @@
-FROM node:20-alpine AS deps
+FROM node:20-alpine AS base
 WORKDIR /app
-COPY package.json package-lock.json ./
+
+FROM base AS deps
+COPY package.json package-lock.json turbo.json ./
+COPY apps/web/package.json ./apps/web/
+COPY packages/db/package.json ./packages/db/
+COPY packages/shared/package.json ./packages/shared/
 RUN npm ci
 
-FROM node:20-alpine AS builder
-WORKDIR /app
+FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
-COPY . .
-RUN npm run build
+COPY --from=deps /app/package.json ./package.json
+COPY --from=deps /app/turbo.json ./turbo.json
+COPY --from=deps /app/tsconfig.base.json ./tsconfig.base.json
+COPY apps/web ./apps/web
+COPY packages ./packages
+RUN npx turbo build --filter=@malay/web
 
-FROM node:20-alpine AS runner
-WORKDIR /app
+FROM base AS runner
 ENV NODE_ENV=production
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-COPY --from=builder /app/public ./public
+COPY --from=builder /app/apps/web/.next/standalone ./
+COPY --from=builder /app/apps/web/.next/static ./apps/web/.next/static
+COPY --from=builder /app/apps/web/public ./apps/web/public
 
 EXPOSE 3000
-CMD ["node", "server.js"]
+ENV PORT=3000
+CMD ["node", "apps/web/server.js"]

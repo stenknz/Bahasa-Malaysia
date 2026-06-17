@@ -1,5 +1,4 @@
 CREATE TABLE IF NOT EXISTS "accounts" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"userId" uuid NOT NULL,
 	"type" text NOT NULL,
 	"provider" text NOT NULL,
@@ -10,12 +9,12 @@ CREATE TABLE IF NOT EXISTS "accounts" (
 	"token_type" text,
 	"scope" text,
 	"id_token" text,
-	"session_state" text
+	"session_state" text,
+	CONSTRAINT "accounts_provider_providerAccountId_pk" PRIMARY KEY("provider","providerAccountId")
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "authenticators" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
-	"credentialId" text NOT NULL,
+	"credentialID" text NOT NULL,
 	"userId" uuid NOT NULL,
 	"providerAccountId" text NOT NULL,
 	"credentialPublicKey" text NOT NULL,
@@ -23,15 +22,14 @@ CREATE TABLE IF NOT EXISTS "authenticators" (
 	"credentialDeviceType" text NOT NULL,
 	"credentialBackedUp" boolean NOT NULL,
 	"transports" text,
-	CONSTRAINT "authenticators_credentialId_unique" UNIQUE("credentialId")
+	CONSTRAINT "authenticators_credentialID_pk" PRIMARY KEY("credentialID"),
+	CONSTRAINT "authenticators_credentialID_unique" UNIQUE("credentialID")
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "sessions" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
-	"sessionToken" text NOT NULL,
+	"sessionToken" text PRIMARY KEY NOT NULL,
 	"userId" uuid NOT NULL,
-	"expires" timestamp NOT NULL,
-	CONSTRAINT "sessions_sessionToken_unique" UNIQUE("sessionToken")
+	"expires" timestamp NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "users" (
@@ -58,7 +56,8 @@ CREATE TABLE IF NOT EXISTS "users" (
 CREATE TABLE IF NOT EXISTS "verification_tokens" (
 	"identifier" text NOT NULL,
 	"token" text NOT NULL,
-	"expires" timestamp NOT NULL
+	"expires" timestamp NOT NULL,
+	CONSTRAINT "verification_tokens_identifier_token_pk" PRIMARY KEY("identifier","token")
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "lessons" (

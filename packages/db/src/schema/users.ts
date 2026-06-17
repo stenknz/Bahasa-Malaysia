@@ -1,5 +1,5 @@
 import {
-  pgTable, text, timestamp, integer, date, json, uuid, boolean
+  pgTable, text, timestamp, integer, date, json, uuid, boolean, primaryKey
 } from "drizzle-orm/pg-core";
 
 export const users = pgTable("users", {
@@ -34,7 +34,9 @@ export const accounts = pgTable("accounts", {
   scope: text("scope"),
   id_token: text("id_token"),
   session_state: text("session_state"),
-});
+}, (table) => ({
+  pk: primaryKey({ columns: [table.provider, table.providerAccountId] }),
+}));
 
 export const sessions = pgTable("sessions", {
   sessionToken: text("sessionToken").primaryKey(),
@@ -46,7 +48,9 @@ export const verificationTokens = pgTable("verification_tokens", {
   identifier: text("identifier").notNull(),
   token: text("token").notNull(),
   expires: timestamp("expires", { mode: "date" }).notNull(),
-});
+}, (table) => ({
+  pk: primaryKey({ columns: [table.identifier, table.token] }),
+}));
 
 export const authenticators = pgTable("authenticators", {
   credentialID: text("credentialID").notNull().unique(),
@@ -57,4 +61,6 @@ export const authenticators = pgTable("authenticators", {
   credentialDeviceType: text("credentialDeviceType").notNull(),
   credentialBackedUp: boolean("credentialBackedUp").notNull(),
   transports: text("transports"),
-});
+}, (table) => ({
+  pk: primaryKey({ columns: [table.credentialID] }),
+}));

@@ -1,5 +1,5 @@
 {
-  "id": "8f057585-1a27-4977-a27d-581d998bdb3a",
+  "id": "13322395-f073-4c17-a274-d6e6fdc18e80",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -8,13 +8,6 @@
       "name": "accounts",
       "schema": "",
       "columns": {
-        "id": {
-          "name": "id",
-          "type": "uuid",
-          "primaryKey": true,
-          "notNull": true,
-          "default": "gen_random_uuid()"
-        },
         "userId": {
           "name": "userId",
           "type": "uuid",
@@ -98,7 +91,15 @@
           "onUpdate": "no action"
         }
       },
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "accounts_provider_providerAccountId_pk": {
+          "name": "accounts_provider_providerAccountId_pk",
+          "columns": [
+            "provider",
+            "providerAccountId"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
@@ -108,15 +109,8 @@
       "name": "authenticators",
       "schema": "",
       "columns": {
-        "id": {
-          "name": "id",
-          "type": "uuid",
-          "primaryKey": true,
-          "notNull": true,
-          "default": "gen_random_uuid()"
-        },
-        "credentialId": {
-          "name": "credentialId",
+        "credentialID": {
+          "name": "credentialID",
           "type": "text",
           "primaryKey": false,
           "notNull": true
@@ -180,13 +174,20 @@
           "onUpdate": "no action"
         }
       },
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "authenticators_credentialID_pk": {
+          "name": "authenticators_credentialID_pk",
+          "columns": [
+            "credentialID"
+          ]
+        }
+      },
       "uniqueConstraints": {
-        "authenticators_credentialId_unique": {
-          "name": "authenticators_credentialId_unique",
+        "authenticators_credentialID_unique": {
+          "name": "authenticators_credentialID_unique",
           "nullsNotDistinct": false,
           "columns": [
-            "credentialId"
+            "credentialID"
           ]
         }
       },
@@ -198,17 +199,10 @@
       "name": "sessions",
       "schema": "",
       "columns": {
-        "id": {
-          "name": "id",
-          "type": "uuid",
-          "primaryKey": true,
-          "notNull": true,
-          "default": "gen_random_uuid()"
-        },
         "sessionToken": {
           "name": "sessionToken",
           "type": "text",
-          "primaryKey": false,
+          "primaryKey": true,
           "notNull": true
         },
         "userId": {
@@ -241,15 +235,7 @@
         }
       },
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {
-        "sessions_sessionToken_unique": {
-          "name": "sessions_sessionToken_unique",
-          "nullsNotDistinct": false,
-          "columns": [
-            "sessionToken"
-          ]
-        }
-      },
+      "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
       "isRLSEnabled": false
@@ -412,7 +398,15 @@
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "verification_tokens_identifier_token_pk": {
+          "name": "verification_tokens_identifier_token_pk",
+          "columns": [
+            "identifier",
+            "token"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
