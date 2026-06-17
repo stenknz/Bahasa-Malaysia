@@ -20,7 +20,8 @@ export const authConfig = {
     authorized({ auth, request: { nextUrl } }: { auth: any; request: { nextUrl: URL } }) {
       const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith("/dashboard");
-      if (isOnDashboard) return isLoggedIn;
+      const isOnAdmin = nextUrl.pathname.startsWith("/admin");
+      if (isOnDashboard || isOnAdmin) return isLoggedIn;
       return true;
     },
   },
