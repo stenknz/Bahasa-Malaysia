@@ -25,8 +25,10 @@ export interface ConversationMessage {
   timestamp: string;
 }
 
+export type Grade = 1 | 2 | 3 | 4 | 5;
+
 export interface SrsReviewResult {
   vocabularyId: string;
-  grade: 1 | 2 | 3 | 4 | 5;
+  grade: Grade;
   timestamp: string;
 }

@@ -15,6 +15,13 @@
       "when": 1781671843506,
       "tag": "0001_nebulous_sentry",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1781672216615,
+      "tag": "0002_curly_pyro",
+      "breakpoints": true
     }
   ]
 }
