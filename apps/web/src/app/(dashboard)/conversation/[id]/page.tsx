@@ -66,11 +66,13 @@ export default function ConversationChatPage() {
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
           placeholder="Type your message..."
           className="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-sm dark:border-slate-600 dark:bg-slate-800"
+          aria-label="Message input"
         />
         <button
           onClick={sendMessage}
           disabled={sending}
           className="rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700 disabled:opacity-50"
+          aria-label={sending ? "Sending message" : "Send message"}
         >
           Send
         </button>

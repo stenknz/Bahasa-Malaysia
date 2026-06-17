@@ -49,6 +49,7 @@ export function AudioPlayer({ text, voice = "female", speed = "normal" }: AudioP
         onClick={play}
         disabled={loading}
         className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-700 hover:bg-primary-200 disabled:opacity-50 dark:bg-primary-900/30 dark:text-primary-400"
+        aria-label={loading ? "Loading audio" : playing ? "Stop audio playback" : "Play audio"}
         title={loading ? "Loading..." : playing ? "Stop" : "Play"}
       >
         {loading ? "..." : playing ? "■" : "▶"}
