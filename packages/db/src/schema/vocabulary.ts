@@ -5,7 +5,7 @@ export const vocabulary = pgTable("vocabulary", {
   malay: text("malay").notNull(),
   english: text("english").notNull(),
   pronunciation: text("pronunciation"),
-  partOfSpeech: text("partOfSpeech", { enum: ["noun", "verb", "adjective", "adverb", "pronoun", "preposition", "conjunction", "interjection"] }),
+  partOfSpeech: text("partOfSpeech", { enum: ["noun", "verb", "adjective", "adverb", "pronoun", "preposition", "conjunction", "interjection", "phrase"] }),
   category: text("category").notNull(),
   difficulty: text("difficulty", { enum: ["beginner", "intermediate", "advanced"] }).notNull(),
   exampleSentenceMalay: text("exampleSentenceMalay"),
