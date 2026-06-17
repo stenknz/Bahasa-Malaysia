@@ -1,6 +1,7 @@
 "use client";
 
 import { signOut, useSession } from "next-auth/react";
+import { ThemeToggle } from "./theme-toggle";
 
 export function TopBar() {
   const { data: session, update } = useSession();
@@ -27,6 +28,7 @@ export function TopBar() {
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
+        <ThemeToggle />
         <span className="text-sm text-slate-600 dark:text-slate-300">
           {session?.user?.name || session?.user?.email}
         </span>
