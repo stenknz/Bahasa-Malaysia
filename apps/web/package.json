@@ -12,6 +12,7 @@
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.0",
     "@malay/db": "*",
+    "@malay/audio": "*",
     "@malay/shared": "*",
     "clsx": "^2.1.0",
     "drizzle-orm": "^0.36.0",
