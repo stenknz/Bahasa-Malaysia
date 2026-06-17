@@ -23,23 +23,21 @@ export const users = pgTable("users", {
 });
 
 export const accounts = pgTable("accounts", {
-  id: uuid("id").defaultRandom().primaryKey(),
   userId: uuid("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
   type: text("type").notNull(),
   provider: text("provider").notNull(),
   providerAccountId: text("providerAccountId").notNull(),
-  refreshToken: text("refresh_token"),
-  accessToken: text("access_token"),
-  expiresAt: integer("expires_at"),
-  tokenType: text("token_type"),
+  refresh_token: text("refresh_token"),
+  access_token: text("access_token"),
+  expires_at: integer("expires_at"),
+  token_type: text("token_type"),
   scope: text("scope"),
-  idToken: text("id_token"),
-  sessionState: text("session_state"),
+  id_token: text("id_token"),
+  session_state: text("session_state"),
 });
 
 export const sessions = pgTable("sessions", {
-  id: uuid("id").defaultRandom().primaryKey(),
-  sessionToken: text("sessionToken").notNull().unique(),
+  sessionToken: text("sessionToken").primaryKey(),
   userId: uuid("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
   expires: timestamp("expires", { mode: "date" }).notNull(),
 });
@@ -51,8 +49,7 @@ export const verificationTokens = pgTable("verification_tokens", {
 });
 
 export const authenticators = pgTable("authenticators", {
-  id: uuid("id").defaultRandom().primaryKey(),
-  credentialId: text("credentialId").notNull().unique(),
+  credentialID: text("credentialID").notNull().unique(),
   userId: uuid("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
   providerAccountId: text("providerAccountId").notNull(),
   credentialPublicKey: text("credentialPublicKey").notNull(),
