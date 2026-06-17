@@ -46,5 +46,16 @@ services:
       redis:
         condition: service_healthy
 
+  worker:
+    build: ./apps/worker
+    environment:
+      DATABASE_URL: postgres://malaylang:malaylang@postgres:5432/malaylang
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
 volumes:
   pgdata:
