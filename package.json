@@ -7,7 +7,10 @@
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "docker:dev": "docker compose -f docker-compose.dev.yml up -d",
+    "docker:prod": "docker compose -f docker-compose.prod.yml up -d",
+    "docker:build": "docker compose -f docker-compose.prod.yml build"
   },
   "packageManager": "npm@10.8.0",
   "workspaces": [

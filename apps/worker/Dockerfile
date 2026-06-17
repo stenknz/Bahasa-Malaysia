@@ -8,12 +8,13 @@ COPY packages/db/package.json ./packages/db/
 COPY packages/shared/package.json ./packages/shared/
 RUN npm ci
 
+FROM base AS builder
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN npx turbo build --filter=@malay/worker
+
 FROM base AS runner
 ENV NODE_ENV=production
-COPY --from=deps /app/node_modules ./node_modules
-COPY --from=deps /app/package.json ./package.json
-COPY --from=deps /app/turbo.json ./turbo.json
-COPY --from=deps /app/tsconfig.base.json ./tsconfig.base.json
-COPY apps/worker ./apps/worker
-COPY packages ./packages
-CMD ["npx", "tsx", "apps/worker/src/index.ts"]
+COPY --from=builder /app/apps/worker/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+CMD ["node", "dist/index.js"]
