@@ -17,6 +17,7 @@ export const users = pgTable("users", {
   subscriptionTier: text("subscriptionTier", { enum: ["free", "premium", "enterprise"] }).default("free").notNull(),
   subscriptionStatus: text("subscriptionStatus"),
   subscriptionEnd: timestamp("subscriptionEnd", { mode: "date" }),
+  password: text("password"),
   preferences: json("preferences").$type<{ theme: "light" | "dark"; textSize: "sm" | "md" | "lg" }>().default({ theme: "light", textSize: "md" }),
   createdAt: timestamp("createdAt", { mode: "date" }).defaultNow().notNull(),
   updatedAt: timestamp("updatedAt", { mode: "date" }).defaultNow().notNull(),

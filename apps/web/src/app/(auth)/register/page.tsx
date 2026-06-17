@@ -9,12 +9,36 @@ export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // Registration API will have full password hashing in Phase 2
-    // For now, use Google/Apple OAuth
-    router.push("/auth/login");
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Registration failed");
+        return;
+      }
+      // Auto-login after registration
+      const result = await signIn("credentials", { email, password, redirect: false });
+      if (result?.error) {
+        setError("Account created. Please sign in.");
+        return;
+      }
+      router.push("/dashboard");
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -76,11 +100,13 @@ export default function RegisterPage() {
             required
             aria-label="Password"
           />
+          {error && <p className="text-sm text-red-500">{error}</p>}
           <button
             type="submit"
-            className="w-full rounded-lg bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
+            disabled={loading}
+            className="w-full rounded-lg bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700 disabled:opacity-50"
           >
-            Create Account
+            {loading ? "Creating account..." : "Create Account"}
           </button>
           <p className="text-center text-xs text-slate-500">
             By signing up, you agree to our Terms of Service and Privacy Policy.
