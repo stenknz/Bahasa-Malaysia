@@ -15,6 +15,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     verificationTokensTable: schema.verificationTokens,
     authenticatorsTable: schema.authenticators,
   }),
+  session: { strategy: "jwt" },
   providers: [
     ...authConfig.providers,
     Credentials({
@@ -30,18 +31,27 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (!user || !(user as any).password) return null;
         const valid = await bcrypt.compare(credentials.password as string, (user as any).password);
         if (!valid) return null;
-        return { id: user.id, email: user.email, name: user.name, image: user.image };
+        return { id: user.id, email: user.email, name: user.name, image: user.image, role: (user as any).role, level: (user as any).level, subscriptionTier: (user as any).subscriptionTier };
       },
     }),
   ],
   callbacks: {
     ...authConfig.callbacks,
-    session({ session, user }) {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.role = (user as any).role;
+        token.level = (user as any).level;
+        token.subscriptionTier = (user as any).subscriptionTier;
+      }
+      return token;
+    },
+    async session({ session, token }) {
       if (session.user) {
-        session.user.id = user.id;
-        (session.user as any).role = (user as any).role;
-        (session.user as any).level = (user as any).level;
-        (session.user as any).subscriptionTier = (user as any).subscriptionTier;
+        session.user.id = token.id as string;
+        (session.user as any).role = token.role;
+        (session.user as any).level = token.level;
+        (session.user as any).subscriptionTier = token.subscriptionTier;
       }
       return session;
     },

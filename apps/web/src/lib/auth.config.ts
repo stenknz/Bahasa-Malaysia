@@ -13,8 +13,8 @@ export const authConfig = {
     }),
   ],
   pages: {
-    signIn: "/auth/login",
-    newUser: "/auth/register",
+    signIn: "/login",
+    newUser: "/register",
   },
   callbacks: {
     authorized({ auth, request: { nextUrl } }: { auth: any; request: { nextUrl: URL } }) {

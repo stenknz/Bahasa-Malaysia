@@ -7,11 +7,11 @@ export default function LandingPage() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
           <span className="text-xl font-bold text-primary-600">BM Mastery</span>
           <nav className="flex items-center gap-4">
-            <Link href="/auth/login" className="text-sm font-medium text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" aria-label="Sign in to your account">
+            <Link href="/login" className="text-sm font-medium text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" aria-label="Sign in to your account">
               Sign In
             </Link>
             <Link
-              href="/auth/register"
+              href="/register"
               className="rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700"
               aria-label="Create a new account"
             >
@@ -30,13 +30,13 @@ export default function LandingPage() {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Link
-              href="/auth/register"
+              href="/register"
               className="rounded-lg bg-primary-600 px-6 py-3 text-base font-medium text-white hover:bg-primary-700"
             >
               Start Learning Free
             </Link>
             <Link
-              href="/auth/login"
+              href="/login"
               className="rounded-lg border border-slate-300 px-6 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800"
             >
               Sign In
