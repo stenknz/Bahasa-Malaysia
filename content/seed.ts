@@ -43,11 +43,25 @@ async function seed() {
     for (const file of lessonFiles) {
       const lesson = JSON.parse(readFileSync(join(lessonDir, file), "utf8"));
 
+      function transformSection(key: string, content: unknown): unknown {
+        if (key === "vocabulary") return { words: content };
+        if (key === "dialogue") return { lines: content };
+        if (key === "exercise") {
+          return {
+            questions: (content as Array<Record<string, unknown>>).map((q) => ({
+              ...q,
+              malay: q.question,
+            })),
+          };
+        }
+        return content;
+      }
+
       const sections = Object.entries(lesson.sections)
         .filter(([key]) => sectionTypeMap[key])
         .map(([key, content], index) => ({
           type: sectionTypeMap[key],
-          content: content as Record<string, unknown>,
+          content: transformSection(key, content) as Record<string, unknown>,
           order: index + 1,
         }));
 
