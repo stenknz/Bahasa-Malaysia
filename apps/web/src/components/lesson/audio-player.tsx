@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { speak, stop } from "@malay/audio";
 
 interface AudioPlayerProps {
   text: string;
@@ -11,35 +12,34 @@ interface AudioPlayerProps {
 export function AudioPlayer({ text, voice = "female", speed = "normal" }: AudioPlayerProps) {
   const [playing, setPlaying] = useState(false);
   const [loading, setLoading] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const currentText = useRef(text);
 
   async function play() {
-    if (playing && audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
+    if (playing) {
+      stop();
       setPlaying(false);
       return;
     }
 
-    setLoading(true);
-    try {
-      const res = await fetch("/api/audio/speak", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, voice, speed }),
-      });
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
+    if (!("speechSynthesis" in window)) {
+      setError("Speech synthesis not supported");
+      return;
+    }
 
-      if (audioRef.current) {
-        audioRef.current.src = url;
-        await audioRef.current.play();
-        setPlaying(true);
-      }
+    currentText.current = text;
+    setLoading(true);
+    setError(null);
+    try {
+      await speak(text, voice, speed);
+      if (currentText.current === text) setPlaying(false);
     } catch (err) {
-      console.error("Audio playback failed:", err);
+      if (currentText.current === text) {
+        setError("Audio failed");
+        setPlaying(false);
+      }
     } finally {
-      setLoading(false);
+      if (currentText.current === text) setLoading(false);
     }
   }
 
@@ -54,7 +54,7 @@ export function AudioPlayer({ text, voice = "female", speed = "normal" }: AudioP
       >
         {loading ? "..." : playing ? "■" : "▶"}
       </button>
-      <audio ref={audioRef} onEnded={() => setPlaying(false)} />
+      {error && <span className="text-xs text-red-500">{error}</span>}
     </div>
   );
 }
