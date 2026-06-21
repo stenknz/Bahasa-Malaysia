@@ -43,6 +43,13 @@
       "when": 1781676110538,
       "tag": "0005_tranquil_morbius",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1782022206746,
+      "tag": "0006_brave_polaris",
+      "breakpoints": true
     }
   ]
 }

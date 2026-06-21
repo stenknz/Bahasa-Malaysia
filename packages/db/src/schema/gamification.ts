@@ -35,3 +35,13 @@ export const userDailyChallenges = pgTable("user_daily_challenges", {
   completed: boolean("completed").default(false).notNull(),
   score: integer("score"),
 });
+
+export const dailyActivity = pgTable("daily_activity", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  userId: uuid("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  date: date("date").notNull(),
+  xpEarned: integer("xpEarned").default(0).notNull(),
+  lessonsCompleted: integer("lessonsCompleted").default(0).notNull(),
+  wordsReviewed: integer("wordsReviewed").default(0).notNull(),
+  createdAt: timestamp("createdAt", { mode: "date" }).defaultNow().notNull(),
+});
