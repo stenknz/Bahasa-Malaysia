@@ -146,15 +146,30 @@ export default function LessonPlayerPage() {
   );
 }
 
-function VocabSection({ content }: { content: { words?: string[] } }) {
+function VocabSection({ content }: { content: { words?: Array<{ malay: string; english: string }> } }) {
+  const [hints, setHints] = useState<Record<number, boolean>>({});
   return (
     <div className="space-y-4">
       <h3 className="font-semibold text-slate-900 dark:text-white">Vocabulary</h3>
       <div className="space-y-2">
-        {content.words?.map((word) => (
-          <div key={word} className="flex items-center justify-between rounded-lg bg-slate-50 p-3 dark:bg-slate-800">
-            <span className="font-medium text-slate-900 dark:text-white">{word}</span>
-            <AudioPlayer text={word} />
+        {content.words?.map((word, i) => (
+          <div key={i} className="flex items-center justify-between rounded-lg bg-slate-50 p-3 dark:bg-slate-800">
+            <div className="flex-1">
+              <span className="font-medium text-slate-900 dark:text-white">{word.malay}</span>
+              {hints[i] && (
+                <p className="mt-0.5 text-sm text-slate-500 dark:text-slate-400">{word.english}</p>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setHints((h) => ({ ...h, [i]: !h[i] }))}
+                className="rounded px-2 py-1 text-xs font-medium text-primary-600 hover:bg-primary-50 dark:text-primary-400 dark:hover:bg-primary-900/20"
+                aria-label={hints[i] ? "Hide English" : "Show English"}
+              >
+                {hints[i] ? "Hide" : "Hint"}
+              </button>
+              <AudioPlayer text={word.malay} />
+            </div>
           </div>
         ))}
       </div>

@@ -9,11 +9,20 @@ interface Message {
   timestamp: string;
 }
 
+const suggestions: Record<string, string[]> = {
+  restaurant: ["Saya mahu nasi ayam", "Tolong bagi menu", "Berapa harga ini?", "Air kosong, tolong"],
+  airport: ["Saya nak check in", "Pintu berapa?", "Tolong bagasi saya", "Pukul berapa berlepas?"],
+  hotel: ["Saya ada tempahan", "Bilik nombor berapa?", "Tolong kunci bilik", "Ada WiFi percuma?"],
+  shopping: ["Berapa harga ini?", "Boleh kurang?", "Saya nak cuba", "Terima kasih"],
+  general: ["Apa khabar?", "Saya dari Malaysia", "Selamat berkenalan", "Jumpa lagi"],
+};
+
 export default function ConversationChatPage() {
   const { id } = useParams<{ id: string }>();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [sending, setSending] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(true);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -59,6 +68,37 @@ export default function ConversationChatPage() {
         ))}
         <div ref={bottomRef} />
       </div>
+      {showSuggestions && (
+        <div className="flex flex-wrap gap-2">
+          {suggestions["general"].map((phrase) => (
+            <button
+              key={phrase}
+              onClick={async () => {
+                setShowSuggestions(false);
+                setInput(phrase);
+                // Auto-send
+                setSending(true);
+                try {
+                  const res = await fetch("/api/conversation/message", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ conversationId: id, content: phrase }),
+                  });
+                  const data = await res.json();
+                  setMessages(data.messages);
+                } catch (err) {
+                  console.error("Failed to send message:", err);
+                } finally {
+                  setSending(false);
+                }
+              }}
+              className="rounded-full border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300"
+            >
+              {phrase}
+            </button>
+          ))}
+        </div>
+      )}
       <div className="flex gap-2">
         <input
           value={input}

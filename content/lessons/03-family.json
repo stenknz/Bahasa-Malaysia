@@ -5,7 +5,17 @@
   "order": 3,
   "level": "beginner",
   "sections": {
-    "vocabulary": ["ibu", "bapa", "abang", "kakak", "adik", "besar", "kecil", "tinggi", "pendek"],
+    "vocabulary": [
+      {"malay": "ibu", "english": "mother"},
+      {"malay": "bapa", "english": "father"},
+      {"malay": "abang", "english": "older brother"},
+      {"malay": "kakak", "english": "older sister"},
+      {"malay": "adik", "english": "younger sibling"},
+      {"malay": "besar", "english": "big"},
+      {"malay": "kecil", "english": "small"},
+      {"malay": "tinggi", "english": "tall"},
+      {"malay": "pendek", "english": "short"}
+    ],
     "grammar": {
       "title": "Describing with 'Adalah' and Word Order",
       "explanation": "In Malay, adjectives follow nouns directly (like French/Spanish). 'Adalah' is optional for formal definitions.",

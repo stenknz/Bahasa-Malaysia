@@ -5,7 +5,16 @@
   "order": 2,
   "level": "beginner",
   "sections": {
-    "vocabulary": ["makan", "minum", "nasi", "ayam", "air", "mahu", "tolong", "sedap"],
+    "vocabulary": [
+      {"malay": "makan", "english": "to eat"},
+      {"malay": "minum", "english": "to drink"},
+      {"malay": "nasi", "english": "rice"},
+      {"malay": "ayam", "english": "chicken"},
+      {"malay": "air", "english": "water"},
+      {"malay": "mahu", "english": "to want"},
+      {"malay": "tolong", "english": "please / help"},
+      {"malay": "sedap", "english": "delicious"}
+    ],
     "grammar": {
       "title": "Politeness with 'Tolong'",
       "explanation": "'Tolong' means 'please' or 'help' and is placed at the start of a request. 'Mahu' means 'want' and is less formal than 'hendak'.",

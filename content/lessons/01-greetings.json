@@ -5,7 +5,15 @@
   "order": 1,
   "level": "beginner",
   "sections": {
-    "vocabulary": ["selamat pagi", "apa khabar", "siapa", "nama", "saya", "anda", "jumpa lagi"],
+    "vocabulary": [
+      {"malay": "selamat pagi", "english": "Good morning"},
+      {"malay": "apa khabar", "english": "How are you"},
+      {"malay": "siapa nama", "english": "What is your name"},
+      {"malay": "saya", "english": "I / me"},
+      {"malay": "anda", "english": "you (formal)"},
+      {"malay": "jumpa lagi", "english": "See you again"},
+      {"malay": "selamat berkenalan", "english": "Nice to meet you"}
+    ],
     "grammar": {
       "title": "Basic Sentence Structure",
       "explanation": "Malay sentences follow Subject-Verb-Object order, just like English. There are no articles (a/an/the) and no verb conjugations for tense.",
