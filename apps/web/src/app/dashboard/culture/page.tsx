@@ -1,22 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { VocabImage } from "@/components/vocab-image";
+import { getCultureImageUrl } from "@/lib/image-utils";
 
 const topics = [
   {
     title: "Greetings & Etiquette",
+    slug: "greetings-etiquette",
     content: "In Malaysia, greetings are generally warm but respectful. A handshake with both hands (touching your chest with your right hand after) is common among men. Women may nod with a smile rather than shake hands. Address elders with 'Encik' (Mr), 'Puan' (Mrs), or 'Cik' (Miss) followed by their first name. Remove shoes before entering homes and some places of worship.",
   },
   {
     title: "Festivals",
+    slug: "festivals",
     content: "Malaysia's multicultural society celebrates many festivals. Hari Raya Aidilfitri marks the end of Ramadan with open houses serving traditional cookies and rendang. Chinese New Year features lion dances, ang pow (red packets), and reunion dinners. Deepavali (Festival of Lights) is celebrated with oil lamps, kolam decorations, and sweet treats. Christmas, Vesak Day, and Gawai are also widely celebrated.",
   },
   {
     title: "Food Culture",
+    slug: "food-culture",
     content: "Malaysian food is a vibrant fusion of Malay, Chinese, and Indian cuisines. Rice is a staple at every meal. Eating with your right hand is traditional, but utensils are common. When invited to someone's home for a meal, it's polite to try a bit of everything and compliment the host. Common dishes: Nasi Lemak (national dish), Satay, Roti Canai, Laksa, and Teh Tarik.",
   },
   {
     title: "Business Etiquette",
+    slug: "business-etiquette",
     content: "Business relationships in Malaysia are built on trust and respect. Punctuality is appreciated but not always expected. Business cards should be presented and received with both hands. The concept of 'face' (maintaining dignity and respect) is important. Avoid public criticism or confrontation. Meetings often begin with casual conversation before getting down to business.",
   },
 ];
@@ -54,7 +60,6 @@ export default function CulturePage() {
         Learn about Malaysian customs, festivals, food, and etiquette to enhance your language learning.
       </p>
 
-      {/* Topic tabs */}
       <div className="flex gap-2 overflow-x-auto">
         {topics.map((t, i) => (
           <button
@@ -71,13 +76,18 @@ export default function CulturePage() {
         ))}
       </div>
 
-      {/* Topic content */}
-      <div className="rounded-xl border border-slate-200 p-6 dark:border-slate-700">
-        <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{current.title}</h2>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{current.content}</p>
+      <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
+        <VocabImage
+          src={getCultureImageUrl(current.slug)}
+          alt={current.title}
+          className="h-48 w-full"
+        />
+        <div className="p-6">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{current.title}</h2>
+          <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{current.content}</p>
+        </div>
       </div>
 
-      {/* Cultural Q&A */}
       <div className="rounded-xl border border-slate-200 p-6 dark:border-slate-700">
         <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Ask the Cultural Guide</h2>
         <p className="mt-1 text-sm text-slate-500">Ask any question about Malaysian culture.</p>

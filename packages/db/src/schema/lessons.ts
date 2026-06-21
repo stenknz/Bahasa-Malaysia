@@ -8,6 +8,7 @@ export const lessons = pgTable("lessons", {
   order: integer("order").notNull(),
   level: text("level", { enum: ["beginner", "intermediate", "advanced"] }).notNull(),
   topic: text("topic").notNull(),
+  imageUrl: text("imageUrl"),
   xpReward: integer("xpReward").default(50).notNull(),
   isPremium: boolean("isPremium").default(false).notNull(),
   sections: json("sections").$type<Array<{ type: "vocab" | "grammar" | "dialogue" | "exercise" | "listening" | "speaking"; content: Record<string, unknown>; order: number }>>().default([]).notNull(),

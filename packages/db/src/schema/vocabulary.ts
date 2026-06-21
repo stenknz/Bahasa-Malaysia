@@ -11,6 +11,7 @@ export const vocabulary = pgTable("vocabulary", {
   exampleSentenceMalay: text("exampleSentenceMalay"),
   exampleSentenceEnglish: text("exampleSentenceEnglish"),
   audioKey: text("audioKey"),
+  imageUrl: text("imageUrl"),
   frequency: integer("frequency").default(0),
   createdAt: timestamp("createdAt", { mode: "date" }).defaultNow().notNull(),
 });

@@ -32,6 +32,7 @@ async function seed() {
       difficulty: "beginner" as const,
       exampleSentenceMalay: w.exampleSentence || null,
       exampleSentenceEnglish: w.exampleEnglish || null,
+      imageUrl: w.imageUrl || null,
     }));
     await db.insert(schema.vocabulary).values(words);
     console.log(`  ${data.topic}: ${words.length} words`);
@@ -73,6 +74,7 @@ async function seed() {
         level: lesson.level,
         status: "published",
         topic: lesson.slug.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase()),
+        imageUrl: lesson.imageUrl || null,
         sections: sections as any,
       });
       console.log(`  Lesson: ${lesson.title}`);

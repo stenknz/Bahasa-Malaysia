@@ -16,6 +16,8 @@ interface Lesson {
   slug: string;
   sections: LessonSection[];
   xpReward: number;
+  imageUrl: string | null;
+  description?: string;
 }
 
 export default function LessonPlayerPage() {
@@ -73,14 +75,19 @@ export default function LessonPlayerPage() {
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">{lesson.title}</h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400">
-            Section {activeSection + 1} of {sections.length}
-          </p>
+      <div className="overflow-hidden rounded-xl">
+        {lesson.imageUrl && (
+          <img
+            src={lesson.imageUrl}
+            alt={lesson.title}
+            className="h-48 w-full object-cover"
+            onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+          />
+        )}
+        <div className="bg-gradient-to-r from-primary-600 to-primary-800 p-6 text-white">
+          <h1 className="text-2xl font-bold">{lesson.title}</h1>
+          <p className="mt-1 text-sm text-primary-100">{lesson.description}</p>
         </div>
-        <span className="text-sm font-medium text-primary-600">+{lesson.xpReward} XP</span>
       </div>
 
       <div className="h-2 rounded-full bg-slate-200 dark:bg-slate-700">
