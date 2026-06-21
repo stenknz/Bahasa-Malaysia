@@ -1,0 +1,32 @@
+{
+  "topic": "Kesihatan",
+  "topicEnglish": "Health",
+  "order": 9,
+  "words": [
+    { "malay": "sakit", "english": "sick / pain", "exampleSentence": "Saya rasa sakit kepala.", "exampleEnglish": "I have a headache." },
+    { "malay": "sihat", "english": "healthy", "exampleSentence": "Dia kelihatan sihat.", "exampleEnglish": "He looks healthy." },
+    { "malay": "demam", "english": "fever", "exampleSentence": "Dia demam sejak semalam.", "exampleEnglish": "He has had a fever since yesterday." },
+    { "malay": "batuk", "english": "cough", "exampleSentence": "Tolong tutup mulut semasa batuk.", "exampleEnglish": "Please cover your mouth when coughing." },
+    { "malay": "selsema", "english": "flu", "exampleSentence": "Saya kena selsema.", "exampleEnglish": "I have the flu." },
+    { "malay": "ubat", "english": "medicine", "exampleSentence": "Tolong ambil ubat ini tiga kali sehari.", "exampleEnglish": "Please take this medicine three times a day." },
+    { "malay": "doktor", "english": "doctor", "exampleSentence": "Doktor bagi saya surat cuti.", "exampleEnglish": "The doctor gave me a sick note." },
+    { "malay": "jururawat", "english": "nurse", "exampleSentence": "Jururawat itu sangat peramah.", "exampleEnglish": "The nurse is very friendly." },
+    { "malay": "hospital", "english": "hospital", "exampleSentence": "Dia dimasukkan ke hospital.", "exampleEnglish": "He was admitted to the hospital." },
+    { "malay": "klinik", "english": "clinic", "exampleSentence": "Klinik buka dari pukul lapan pagi.", "exampleEnglish": "The clinic opens from eight in the morning." },
+    { "malay": "rehat", "english": "rest", "exampleSentence": "Awak perlu rehat yang cukup.", "exampleEnglish": "You need enough rest." },
+    { "malay": "tidur", "english": "to sleep", "exampleSentence": "Dia tidur awal setiap malam.", "exampleEnglish": "She sleeps early every night." },
+    { "malay": "letih", "english": "tired", "exampleSentence": "Saya berasa letih selepas kerja.", "exampleEnglish": "I feel tired after work." },
+    { "malay": "senaman", "english": "exercise", "exampleSentence": "Senaman baik untuk kesihatan.", "exampleEnglish": "Exercise is good for health." },
+    { "malay": "berjalan", "english": "to walk", "exampleSentence": "Kami berjalan di taman setiap pagi.", "exampleEnglish": "We walk in the park every morning." },
+    { "malay": "berlari", "english": "to run", "exampleSentence": "Dia suka berlari di padang.", "exampleEnglish": "He likes to run on the field." },
+    { "malay": "berenang", "english": "to swim", "exampleSentence": "Mereka berenang di pantai.", "exampleEnglish": "They swim at the beach." },
+    { "malay": "badan", "english": "body", "exampleSentence": "Badan saya rasa sakit semua.", "exampleEnglish": "My whole body feels sore." },
+    { "malay": "kepala", "english": "head", "exampleSentence": "Saya pusing kepala.", "exampleEnglish": "I feel dizzy." },
+    { "malay": "mata", "english": "eye", "exampleSentence": "Mata dia sangat cantik.", "exampleEnglish": "Her eyes are very beautiful." },
+    { "malay": "tangan", "english": "hand / arm", "exampleSentence": "Tolong basuh tangan sebelum makan.", "exampleEnglish": "Please wash your hands before eating." },
+    { "malay": "kaki", "english": "foot / leg", "exampleSentence": "Kaki saya sakit selepas berlari.", "exampleEnglish": "My legs are sore after running." },
+    { "malay": "perut", "english": "stomach", "exampleSentence": "Perut saya lapar.", "exampleEnglish": "My stomach is hungry." },
+    { "malay": "diet", "english": "diet", "exampleSentence": "Dia sedang berdiet.", "exampleEnglish": "She is on a diet." },
+    { "malay": "berat", "english": "weight / heavy", "exampleSentence": "Berat badan dia naik.", "exampleEnglish": "His body weight increased." }
+  ]
+}

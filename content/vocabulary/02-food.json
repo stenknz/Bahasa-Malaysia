@@ -1,0 +1,32 @@
+{
+  "topic": "Makanan & Minuman",
+  "topicEnglish": "Food & Drink",
+  "order": 2,
+  "words": [
+    { "malay": "nasi", "english": "rice", "exampleSentence": "Saya makan nasi setiap hari.", "exampleEnglish": "I eat rice every day." },
+    { "malay": "ayam", "english": "chicken", "exampleSentence": "Dia suka ayam goreng.", "exampleEnglish": "She likes fried chicken." },
+    { "malay": "ikan", "english": "fish", "exampleSentence": "Ikan ini sangat segar.", "exampleEnglish": "This fish is very fresh." },
+    { "malay": "daging", "english": "meat", "exampleSentence": "Tolong potong daging itu.", "exampleEnglish": "Please cut the meat." },
+    { "malay": "sayur", "english": "vegetables", "exampleSentence": "Kita perlu makan sayur.", "exampleEnglish": "We need to eat vegetables." },
+    { "malay": "buah", "english": "fruit", "exampleSentence": "Buah ini manis sekali.", "exampleEnglish": "This fruit is very sweet." },
+    { "malay": "roti", "english": "bread", "exampleSentence": "Saya makan roti untuk sarapan.", "exampleEnglish": "I eat bread for breakfast." },
+    { "malay": "telur", "english": "egg", "exampleSentence": "Tolong rebus telur ini.", "exampleEnglish": "Please boil this egg." },
+    { "malay": "susu", "english": "milk", "exampleSentence": "Anak itu minum susu.", "exampleEnglish": "The child drinks milk." },
+    { "malay": "air", "english": "water", "exampleSentence": "Tolong bagi saya segelas air.", "exampleEnglish": "Please give me a glass of water." },
+    { "malay": "kopi", "english": "coffee", "exampleSentence": "Dia minum kopi setiap pagi.", "exampleEnglish": "He drinks coffee every morning." },
+    { "malay": "teh", "english": "tea", "exampleSentence": "Awak mahu teh atau kopi?", "exampleEnglish": "Do you want tea or coffee?" },
+    { "malay": "gula", "english": "sugar", "exampleSentence": "Tolong kurangkan gula.", "exampleEnglish": "Please reduce the sugar." },
+    { "malay": "garam", "english": "salt", "exampleSentence": "Masukkan sedikit garam.", "exampleEnglish": "Add a little salt." },
+    { "malay": "pedas", "english": "spicy", "exampleSentence": "Makanan ini sangat pedas.", "exampleEnglish": "This food is very spicy." },
+    { "malay": "masin", "english": "salty", "exampleSentence": "Sup ini terlalu masin.", "exampleEnglish": "This soup is too salty." },
+    { "malay": "manis", "english": "sweet", "exampleSentence": "Kek ini sangat manis.", "exampleEnglish": "This cake is very sweet." },
+    { "malay": "pahit", "english": "bitter", "exampleSentence": "Ubat ini rasa pahit.", "exampleEnglish": "This medicine tastes bitter." },
+    { "malay": "masak", "english": "to cook", "exampleSentence": "Dia suka masak untuk keluarga.", "exampleEnglish": "She likes to cook for the family." },
+    { "malay": "makan", "english": "to eat", "exampleSentence": "Jom makan bersama-sama.", "exampleEnglish": "Let's eat together." },
+    { "malay": "minum", "english": "to drink", "exampleSentence": "Awak mahu minum apa?", "exampleEnglish": "What would you like to drink?" },
+    { "malay": "lapar", "english": "hungry", "exampleSentence": "Saya sangat lapar sekarang.", "exampleEnglish": "I am very hungry now." },
+    { "malay": "dahaga", "english": "thirsty", "exampleSentence": "Dia berasa dahaga selepas berlari.", "exampleEnglish": "She felt thirsty after running." },
+    { "malay": "sarapan", "english": "breakfast", "exampleSentence": "Sarapan pagi penting untuk kesihatan.", "exampleEnglish": "Breakfast is important for health." },
+    { "malay": "makan malam", "english": "dinner", "exampleSentence": "Kami makan malam pukul lapan.", "exampleEnglish": "We have dinner at eight o'clock." }
+  ]
+}

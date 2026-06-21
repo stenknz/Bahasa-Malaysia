@@ -1,0 +1,27 @@
+{
+  "topic": "Pengangkutan",
+  "topicEnglish": "Transport",
+  "order": 7,
+  "words": [
+    { "malay": "kereta", "english": "car", "exampleSentence": "Dia memandu kereta baru.", "exampleEnglish": "He drives a new car." },
+    { "malay": "bas", "english": "bus", "exampleSentence": "Saya naik bas ke sekolah.", "exampleEnglish": "I take the bus to school." },
+    { "malay": "keretapi", "english": "train", "exampleSentence": "Keretapi bertolak pukul lapan.", "exampleEnglish": "The train departs at eight." },
+    { "malay": "kapal terbang", "english": "airplane", "exampleSentence": "Kapal terbang mendarat dengan selamat.", "exampleEnglish": "The airplane landed safely." },
+    { "malay": "teksi", "english": "taxi", "exampleSentence": "Kami naik teksi ke hotel.", "exampleEnglish": "We took a taxi to the hotel." },
+    { "malay": "motosikal", "english": "motorcycle", "exampleSentence": "Dia pergi kerja naik motosikal.", "exampleEnglish": "He goes to work by motorcycle." },
+    { "malay": "basikal", "english": "bicycle", "exampleSentence": "Saya suka berbasikal pada hujung minggu.", "exampleEnglish": "I like to cycle on weekends." },
+    { "malay": "jalan", "english": "road / street", "exampleSentence": "Jalan ini sesak pada waktu pagi.", "exampleEnglish": "This road is congested in the morning." },
+    { "malay": "tiket", "english": "ticket", "exampleSentence": "Tolong beli dua tiket.", "exampleEnglish": "Please buy two tickets." },
+    { "malay": "stesen", "english": "station", "exampleSentence": "Stesen bas berdekatan dengan sini.", "exampleEnglish": "The bus station is near here." },
+    { "malay": "lapangan terbang", "english": "airport", "exampleSentence": "Kami perlu ke lapangan terbang dua jam awal.", "exampleEnglish": "We need to go to the airport two hours early." },
+    { "malay": "pandu", "english": "to drive", "exampleSentence": "Dia pandu kereta dengan berhati-hati.", "exampleEnglish": "He drives carefully." },
+    { "malay": "naik", "english": "to ride / board", "exampleSentence": "Jom naik bas ini.", "exampleEnglish": "Let's board this bus." },
+    { "malay": "turun", "english": "to get off / descend", "exampleSentence": "Saya turun di stesen seterusnya.", "exampleEnglish": "I get off at the next station." },
+    { "malay": "pergi", "english": "to go", "exampleSentence": "Dia pergi ke pasar.", "exampleEnglish": "She goes to the market." },
+    { "malay": "sampai", "english": "to arrive", "exampleSentence": "Kami sampai pada pukul sepuluh.", "exampleEnglish": "We arrived at ten o'clock." },
+    { "malay": "bertolak", "english": "to depart", "exampleSentence": "Bas akan bertolak dalam lima minit.", "exampleEnglish": "The bus will depart in five minutes." },
+    { "malay": "sesak", "english": "crowded", "exampleSentence": "Keretapi ini terlalu sesak.", "exampleEnglish": "This train is too crowded." },
+    { "malay": "lambat", "english": "late / slow", "exampleSentence": "Bas selalu lambat.", "exampleEnglish": "The bus is always late." },
+    { "malay": "cepat", "english": "fast / quick", "exampleSentence": "Kereta ini sangat cepat.", "exampleEnglish": "This car is very fast." }
+  ]
+}

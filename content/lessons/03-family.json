@@ -1,0 +1,30 @@
+{
+  "slug": "family-descriptions",
+  "title": "Family & Descriptions",
+  "description": "Talk about your family members and describe people.",
+  "order": 3,
+  "level": "beginner",
+  "sections": {
+    "vocabulary": ["ibu", "bapa", "abang", "kakak", "adik", "besar", "kecil", "tinggi", "pendek"],
+    "grammar": {
+      "title": "Describing with 'Adalah' and Word Order",
+      "explanation": "In Malay, adjectives follow nouns directly (like French/Spanish). 'Adalah' is optional for formal definitions.",
+      "examples": [
+        { "malay": "Rumah besar.", "english": "A big house / The house is big." },
+        { "malay": "Dia adalah guru saya.", "english": "He is my teacher." }
+      ]
+    },
+    "dialogue": [
+      { "speaker": "Aminah", "malay": "Ini gambar keluarga saya.", "english": "This is my family photo." },
+      { "speaker": "John", "malay": "Wah, besar keluarga awak! Siapa ini?", "english": "Wow, your family is big! Who is this?" },
+      { "speaker": "Aminah", "malay": "Ini ibu dan bapa saya. Mereka sudah tua.", "english": "This is my mother and father. They are old." },
+      { "speaker": "John", "malay": "Abang awak tinggi sekali!", "english": "Your older brother is very tall!" },
+      { "speaker": "Aminah", "malay": "Ya, dia tinggi. Adik saya pula pendek.", "english": "Yes, he is tall. My younger sibling however is short." }
+    ],
+    "exercise": [
+      { "question": "How do you say 'my mother'?", "options": ["Ibu saya", "Saya ibu", "Ibu awak", "Dia ibu"], "correct": 0 },
+      { "question": "What is the word order for 'big house'?", "options": ["Besar rumah", "Rumah besar", "Rumah adalah besar", "Besar adalah rumah"], "correct": 1 },
+      { "question": "What does 'Mereka sudah tua' mean?", "options": ["They are young", "They are old", "They are tall", "They are short"], "correct": 1 }
+    ]
+  }
+}

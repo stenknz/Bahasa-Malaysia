@@ -1,0 +1,27 @@
+{
+  "topic": "Belanja",
+  "topicEnglish": "Shopping",
+  "order": 6,
+  "words": [
+    { "malay": "beli", "english": "to buy", "exampleSentence": "Saya nak beli baju baru.", "exampleEnglish": "I want to buy new clothes." },
+    { "malay": "jual", "english": "to sell", "exampleSentence": "Dia jual buah di pasar.", "exampleEnglish": "He sells fruit at the market." },
+    { "malay": "harga", "english": "price", "exampleSentence": "Harga barang ini mahal.", "exampleEnglish": "The price of this item is expensive." },
+    { "malay": "murah", "english": "cheap", "exampleSentence": "Baju ini sangat murah.", "exampleEnglish": "This shirt is very cheap." },
+    { "malay": "mahal", "english": "expensive", "exampleSentence": "Kereta itu terlalu mahal.", "exampleEnglish": "That car is too expensive." },
+    { "malay": "wang", "english": "money", "exampleSentence": "Saya tidak ada wang sekarang.", "exampleEnglish": "I don't have money now." },
+    { "malay": "bayar", "english": "to pay", "exampleSentence": "Tolong bayar di kaunter.", "exampleEnglish": "Please pay at the counter." },
+    { "malay": "dompet", "english": "wallet", "exampleSentence": "Dompet saya hilang.", "exampleEnglish": "My wallet is lost." },
+    { "malay": "beg", "english": "bag", "exampleSentence": "Dia bawa beg besar.", "exampleEnglish": "She carries a big bag." },
+    { "malay": "baju", "english": "clothes / shirt", "exampleSentence": "Baju ini cantik.", "exampleEnglish": "This shirt is beautiful." },
+    { "malay": "seluar", "english": "pants", "exampleSentence": "Dia pakai seluar hitam.", "exampleEnglish": "He wears black pants." },
+    { "malay": "kasut", "english": "shoes", "exampleSentence": "Kasut baru saya selesa.", "exampleEnglish": "My new shoes are comfortable." },
+    { "malay": "saiz", "english": "size", "exampleSentence": "Awak pakai saiz apa?", "exampleEnglish": "What size do you wear?" },
+    { "malay": "warna", "english": "color", "exampleSentence": "Saya suka warna biru.", "exampleEnglish": "I like the color blue." },
+    { "malay": "diskaun", "english": "discount", "exampleSentence": "Ada diskaun tiga puluh peratus.", "exampleEnglish": "There is a thirty percent discount." },
+    { "malay": "percuma", "english": "free (no cost)", "exampleSentence": "Penghantaran adalah percuma.", "exampleEnglish": "Delivery is free." },
+    { "malay": "tukar", "english": "to change / exchange", "exampleSentence": "Boleh saya tukar saiz ini?", "exampleEnglish": "Can I exchange this size?" },
+    { "malay": "pulangan", "english": "refund / return", "exampleSentence": "Saya minta pulangan wang.", "exampleEnglish": "I want a refund." },
+    { "malay": "cukup", "english": "enough", "exampleSentence": "Wang ini tidak cukup.", "exampleEnglish": "This money is not enough." },
+    { "malay": "kurang", "english": "less / not enough", "exampleSentence": "Harga itu kurang dari jangkaan.", "exampleEnglish": "The price is less than expected." }
+  ]
+}

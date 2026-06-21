@@ -1,0 +1,27 @@
+{
+  "topic": "Masa & Cuaca",
+  "topicEnglish": "Time & Weather",
+  "order": 5,
+  "words": [
+    { "malay": "hari", "english": "day", "exampleSentence": "Ada tujuh hari dalam seminggu.", "exampleEnglish": "There are seven days in a week." },
+    { "malay": "minggu", "english": "week", "exampleSentence": "Saya kerja lima hari seminggu.", "exampleEnglish": "I work five days a week." },
+    { "malay": "bulan", "english": "month", "exampleSentence": "Bulan ini saya ada cuti.", "exampleEnglish": "This month I have a holiday." },
+    { "malay": "tahun", "english": "year", "exampleSentence": "Tahun depan saya nak melancong.", "exampleEnglish": "Next year I want to travel." },
+    { "malay": "pagi", "english": "morning", "exampleSentence": "Saya bangun awal pagi.", "exampleEnglish": "I wake up early in the morning." },
+    { "malay": "tengah hari", "english": "afternoon / noon", "exampleSentence": "Kami makan tengah hari bersama.", "exampleEnglish": "We have lunch together." },
+    { "malay": "petang", "english": "evening", "exampleSentence": "Dia balik kerja pada petang.", "exampleEnglish": "He returns from work in the evening." },
+    { "malay": "malam", "english": "night", "exampleSentence": "Selamat malam, jumpa lagi.", "exampleEnglish": "Good night, see you again." },
+    { "malay": "semalam", "english": "yesterday", "exampleSentence": "Semalam hujan lebat.", "exampleEnglish": "Yesterday it rained heavily." },
+    { "malay": "hari ini", "english": "today", "exampleSentence": "Hari ini saya sibuk.", "exampleEnglish": "Today I am busy." },
+    { "malay": "esok", "english": "tomorrow", "exampleSentence": "Esok kita ada mesyuarat.", "exampleEnglish": "Tomorrow we have a meeting." },
+    { "malay": "sekarang", "english": "now", "exampleSentence": "Saya sedang makan sekarang.", "exampleEnglish": "I am eating now." },
+    { "malay": "hujan", "english": "rain", "exampleSentence": "Hujan turun dengan lebat.", "exampleEnglish": "The rain is falling heavily." },
+    { "malay": "panas", "english": "hot", "exampleSentence": "Cuaca hari ini sangat panas.", "exampleEnglish": "The weather today is very hot." },
+    { "malay": "sejuk", "english": "cold", "exampleSentence": "Air ini terasa sejuk.", "exampleEnglish": "This water feels cold." },
+    { "malay": "angin", "english": "wind", "exampleSentence": "Angin bertiup kencang.", "exampleEnglish": "The wind is blowing strongly." },
+    { "malay": "matahari", "english": "sun", "exampleSentence": "Matahari terbit di timur.", "exampleEnglish": "The sun rises in the east." },
+    { "malay": "awan", "english": "cloud", "exampleSentence": "Langit penuh dengan awan.", "exampleEnglish": "The sky is full of clouds." },
+    { "malay": "panas terik", "english": "scorching hot", "exampleSentence": "Cuaca panas terik hari ini.", "exampleEnglish": "The weather is scorching hot today." },
+    { "malay": "berangin", "english": "windy", "exampleSentence": "Hari ini sangat berangin.", "exampleEnglish": "Today is very windy." }
+  ]
+}

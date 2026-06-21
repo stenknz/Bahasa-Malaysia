@@ -1,0 +1,22 @@
+{
+  "topic": "Keluarga",
+  "topicEnglish": "Family",
+  "order": 3,
+  "words": [
+    { "malay": "ibu", "english": "mother", "exampleSentence": "Ibu saya seorang guru.", "exampleEnglish": "My mother is a teacher." },
+    { "malay": "bapa", "english": "father", "exampleSentence": "Bapa saya bekerja di pejabat.", "exampleEnglish": "My father works at an office." },
+    { "malay": "abang", "english": "older brother", "exampleSentence": "Abang saya lebih tua dua tahun.", "exampleEnglish": "My older brother is two years older." },
+    { "malay": "kakak", "english": "older sister", "exampleSentence": "Kakak saya pandai memasak.", "exampleEnglish": "My older sister is good at cooking." },
+    { "malay": "adik", "english": "younger sibling", "exampleSentence": "Adik saya masih kecil.", "exampleEnglish": "My younger sibling is still small." },
+    { "malay": "datuk", "english": "grandfather", "exampleSentence": "Datuk saya berumur tujuh puluh tahun.", "exampleEnglish": "My grandfather is seventy years old." },
+    { "malay": "nenek", "english": "grandmother", "exampleSentence": "Nenek tinggal di kampung.", "exampleEnglish": "Grandmother lives in the village." },
+    { "malay": "suami", "english": "husband", "exampleSentence": "Suami saya bekerja di hospital.", "exampleEnglish": "My husband works at a hospital." },
+    { "malay": "isteri", "english": "wife", "exampleSentence": "Isteri saya seorang doktor.", "exampleEnglish": "My wife is a doctor." },
+    { "malay": "anak", "english": "child", "exampleSentence": "Dia ada tiga orang anak.", "exampleEnglish": "She has three children." },
+    { "malay": "saudara", "english": "relative", "exampleSentence": "Dia saudara saya dari Johor.", "exampleEnglish": "He is my relative from Johor." },
+    { "malay": "keluarga", "english": "family", "exampleSentence": "Keluarga saya besar.", "exampleEnglish": "My family is big." },
+    { "malay": "nama", "english": "name", "exampleSentence": "Nama saya Ahmad.", "exampleEnglish": "My name is Ahmad." },
+    { "malay": "panggil", "english": "to call", "exampleSentence": "Tolong panggil dia.", "exampleEnglish": "Please call him." },
+    { "malay": "sayang", "english": "to love / dear", "exampleSentence": "Saya sayang keluarga saya.", "exampleEnglish": "I love my family." }
+  ]
+}

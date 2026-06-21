@@ -1,0 +1,18 @@
+{
+  "slug": "greetings-etiquette",
+  "title": "Greetings & Etiquette",
+  "category": "social",
+  "content": "Malaysian greetings are warm but follow specific cultural norms. The 'salam' (handshake) is done with both hands for Muslims, especially with elders. Always use titles (Encik, Puan, Cik) unless invited to use first names.",
+  "tips": [
+    "Greet elders first when entering a room",
+    "Use right hand for giving and receiving",
+    "Bowing slightly when greeting elders shows respect",
+    "Never point with your index finger — use your thumb"
+  ],
+  "phrases": [
+    { "situation": "Morning greeting", "malay": "Selamat pagi", "english": "Good morning" },
+    { "situation": "When meeting someone", "malay": "Selamat berkenalan", "english": "Nice to meet you" },
+    { "situation": "When leaving", "malay": "Selamat tinggal", "english": "Goodbye (said by person leaving)" },
+    { "situation": "When being left", "malay": "Selamat jalan", "english": "Goodbye (said to person leaving)" }
+  ]
+}

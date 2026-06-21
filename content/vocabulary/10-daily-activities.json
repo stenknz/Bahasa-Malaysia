@@ -1,0 +1,27 @@
+{
+  "topic": "Aktiviti Harian",
+  "topicEnglish": "Daily Activities",
+  "order": 10,
+  "words": [
+    { "malay": "bangun", "english": "to wake up", "exampleSentence": "Saya bangun pukul lima pagi.", "exampleEnglish": "I wake up at five in the morning." },
+    { "malay": "mandi", "english": "to bathe", "exampleSentence": "Dia mandi sebelum sarapan.", "exampleEnglish": "He showers before breakfast." },
+    { "malay": "pakai", "english": "to wear", "exampleSentence": "Dia pakai baju putih.", "exampleEnglish": "She wears a white shirt." },
+    { "malay": "makan", "english": "to eat", "exampleSentence": "Mari kita makan bersama.", "exampleEnglish": "Let's eat together." },
+    { "malay": "minum", "english": "to drink", "exampleSentence": "Saya minum air kosong.", "exampleEnglish": "I drink plain water." },
+    { "malay": "baca", "english": "to read", "exampleSentence": "Dia suka baca buku.", "exampleEnglish": "She likes to read books." },
+    { "malay": "tulis", "english": "to write", "exampleSentence": "Tolong tulis nama awak.", "exampleEnglish": "Please write your name." },
+    { "malay": "dengar", "english": "to listen", "exampleSentence": "Saya dengar radio setiap pagi.", "exampleEnglish": "I listen to the radio every morning." },
+    { "malay": "cakap", "english": "to speak", "exampleSentence": "Dia cakap bahasa Melayu.", "exampleEnglish": "He speaks Malay." },
+    { "malay": "belajar", "english": "to study", "exampleSentence": "Dia belajar di universiti.", "exampleEnglish": "She studies at university." },
+    { "malay": "ajar", "english": "to teach", "exampleSentence": "Dia ajar bahasa Inggeris.", "exampleEnglish": "He teaches English." },
+    { "malay": "main", "english": "to play", "exampleSentence": "Kanak-kanak main di padang.", "exampleEnglish": "The children play on the field." },
+    { "malay": "masak", "english": "to cook", "exampleSentence": "Ibu masak nasi lemak.", "exampleEnglish": "Mother cooks nasi lemak." },
+    { "malay": "cuci", "english": "to wash", "exampleSentence": "Tolong cuci pinggan ini.", "exampleEnglish": "Please wash these dishes." },
+    { "malay": "kemas", "english": "to tidy up", "exampleSentence": "Dia kemas bilik setiap hari.", "exampleEnglish": "She tidies her room every day." },
+    { "malay": "basuh", "english": "to wash (clothes)", "exampleSentence": "Saya basuh baju pada hujung minggu.", "exampleEnglish": "I wash clothes on the weekend." },
+    { "malay": "lipat", "english": "to fold", "exampleSentence": "Tolong lipat baju itu.", "exampleEnglish": "Please fold those clothes." },
+    { "malay": "tonton", "english": "to watch", "exampleSentence": "Kami tonton wayang bersama.", "exampleEnglish": "We watch a movie together." },
+    { "malay": "beli", "english": "to buy", "exampleSentence": "Dia beli sayur di pasar.", "exampleEnglish": "She buys vegetables at the market." },
+    { "malay": "balik", "english": "to return / go home", "exampleSentence": "Saya balik rumah pukul enam.", "exampleEnglish": "I return home at six o'clock." }
+  ]
+}

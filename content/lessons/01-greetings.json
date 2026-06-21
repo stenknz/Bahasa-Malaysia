@@ -1,0 +1,30 @@
+{
+  "slug": "greetings",
+  "title": "Greetings & Introductions",
+  "description": "Learn how to greet people and introduce yourself in Malay.",
+  "order": 1,
+  "level": "beginner",
+  "sections": {
+    "vocabulary": ["selamat pagi", "apa khabar", "siapa", "nama", "saya", "anda", "jumpa lagi"],
+    "grammar": {
+      "title": "Basic Sentence Structure",
+      "explanation": "Malay sentences follow Subject-Verb-Object order, just like English. There are no articles (a/an/the) and no verb conjugations for tense.",
+      "examples": [
+        { "malay": "Saya Ali.", "english": "I am Ali." },
+        { "malay": "Dia guru.", "english": "He/She is a teacher." }
+      ]
+    },
+    "dialogue": [
+      { "speaker": "Ali", "malay": "Selamat pagi! Apa khabar?", "english": "Good morning! How are you?" },
+      { "speaker": "Siti", "malay": "Khabar baik. Siapa nama awak?", "english": "I'm fine. What is your name?" },
+      { "speaker": "Ali", "malay": "Nama saya Ali. Saya dari Kuala Lumpur.", "english": "My name is Ali. I am from Kuala Lumpur." },
+      { "speaker": "Siti", "malay": "Selamat berkenalan, Ali!", "english": "Nice to meet you, Ali!" },
+      { "speaker": "Ali", "malay": "Selamat berkenalan! Jumpa lagi!", "english": "Nice to meet you! See you again!" }
+    ],
+    "exercise": [
+      { "question": "How do you say 'Good morning' in Malay?", "options": ["Selamat malam", "Selamat pagi", "Selamat petang", "Selamat tinggal"], "correct": 1 },
+      { "question": "What does 'Apa khabar' mean?", "options": ["Goodbye", "Thank you", "How are you", "Good night"], "correct": 2 },
+      { "question": "How do you introduce yourself?", "options": ["Nama saya...", "Selamat...", "Jumpa lagi", "Terima kasih"], "correct": 0 }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "sentence-structure",
+  "title": "Basic Sentence Structure",
+  "category": "basics",
+  "explanation": "Malay follows Subject-Verb-Object (SVO) order, similar to English. However, there are no tenses (time is indicated by context or time words), no articles, and no plural conjugation.",
+  "rules": [
+    "SVO word order: Subject + Verb + Object",
+    "Adjectives follow nouns: rumah besar (house big)",
+    "Negation: 'tidak' for verbs/adjectives, 'bukan' for nouns",
+    "Questions: just add 'kah' or use question words (apa, siapa, mana)"
+  ],
+  "examples": [
+    { "malay": "Saya makan nasi.", "english": "I eat rice." },
+    { "malay": "Dia tidak suka pedas.", "english": "He/She doesn't like spicy." },
+    { "malay": "Itu bukan buku saya.", "english": "That is not my book." },
+    { "malay": "Awak mahu pergi ke mana?", "english": "Where do you want to go?" }
+  ],
+  "commonMistakes": [
+    { "mistake": "Adding 'adalah' everywhere like 'is' in English", "fix": "'Adalah' is only used for formal definitions, not everyday sentences" },
+    { "mistake": "Conjugating verbs for tense", "fix": "Malay verbs don't change. Use time words (sudah, akan, sedang)" }
+  ]
+}

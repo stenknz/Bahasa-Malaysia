@@ -1,0 +1,22 @@
+{
+  "topic": "Nombor",
+  "topicEnglish": "Numbers",
+  "order": 1,
+  "words": [
+    { "malay": "satu", "english": "one", "exampleSentence": "Saya ada satu buku.", "exampleEnglish": "I have one book." },
+    { "malay": "dua", "english": "two", "exampleSentence": "Dia ada dua ekor kucing.", "exampleEnglish": "She has two cats." },
+    { "malay": "tiga", "english": "three", "exampleSentence": "Kami tinggal di sini tiga tahun.", "exampleEnglish": "We have lived here for three years." },
+    { "malay": "empat", "english": "four", "exampleSentence": "Meja ini ada empat kaki.", "exampleEnglish": "This table has four legs." },
+    { "malay": "lima", "english": "five", "exampleSentence": "Saya bangun pukul lima pagi.", "exampleEnglish": "I wake up at five in the morning." },
+    { "malay": "enam", "english": "six", "exampleSentence": "Dia belajar enam jam sehari.", "exampleEnglish": "He studies six hours a day." },
+    { "malay": "tujuh", "english": "seven", "exampleSentence": "Ada tujuh hari dalam seminggu.", "exampleEnglish": "There are seven days in a week." },
+    { "malay": "lapan", "english": "eight", "exampleSentence": "Dia berumur lapan tahun.", "exampleEnglish": "She is eight years old." },
+    { "malay": "sembilan", "english": "nine", "exampleSentence": "Kelas bermula pukul sembilan.", "exampleEnglish": "Class starts at nine." },
+    { "malay": "sepuluh", "english": "ten", "exampleSentence": "Saya ada sepuluh jari.", "exampleEnglish": "I have ten fingers." },
+    { "malay": "seratus", "english": "one hundred", "exampleSentence": "Buku ini ada seratus muka surat.", "exampleEnglish": "This book has one hundred pages." },
+    { "malay": "seribu", "english": "one thousand", "exampleSentence": "Harga itu seribu ringgit.", "exampleEnglish": "That price is one thousand ringgit." },
+    { "malay": "pertama", "english": "first", "exampleSentence": "Ini kali pertama saya ke sini.", "exampleEnglish": "This is my first time here." },
+    { "malay": "kedua", "english": "second", "exampleSentence": "Dia anak kedua dalam keluarga.", "exampleEnglish": "He is the second child in the family." },
+    { "malay": "separuh", "english": "half", "exampleSentence": "Tolong bagi saya separuh.", "exampleEnglish": "Please give me half." }
+  ]
+}

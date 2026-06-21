@@ -1,0 +1,27 @@
+{
+  "topic": "Tempat & Arah",
+  "topicEnglish": "Places & Directions",
+  "order": 4,
+  "words": [
+    { "malay": "rumah", "english": "house / home", "exampleSentence": "Saya balik rumah pukul enam.", "exampleEnglish": "I go home at six o'clock." },
+    { "malay": "sekolah", "english": "school", "exampleSentence": "Dia pergi sekolah setiap hari.", "exampleEnglish": "She goes to school every day." },
+    { "malay": "pejabat", "english": "office", "exampleSentence": "Dia bekerja di pejabat bank.", "exampleEnglish": "He works at a bank office." },
+    { "malay": "hospital", "english": "hospital", "exampleSentence": "Dia pergi hospital kerana sakit.", "exampleEnglish": "He went to the hospital because he was sick." },
+    { "malay": "pasar", "english": "market", "exampleSentence": "Ibu pergi pasar setiap pagi.", "exampleEnglish": "Mother goes to the market every morning." },
+    { "malay": "kedai", "english": "shop / store", "exampleSentence": "Kedai itu buka pukul sembilan.", "exampleEnglish": "The shop opens at nine o'clock." },
+    { "malay": "masjid", "english": "mosque", "exampleSentence": "Dia pergi masjid pada hari Jumaat.", "exampleEnglish": "He goes to the mosque on Friday." },
+    { "malay": "taman", "english": "park / garden", "exampleSentence": "Kami berjalan di taman.", "exampleEnglish": "We walk in the park." },
+    { "malay": "kiri", "english": "left", "exampleSentence": "Tolong pusing ke kiri.", "exampleEnglish": "Please turn left." },
+    { "malay": "kanan", "english": "right", "exampleSentence": "Sekolah itu di sebelah kanan.", "exampleEnglish": "The school is on the right side." },
+    { "malay": "depan", "english": "front", "exampleSentence": "Dia duduk di depan kelas.", "exampleEnglish": "She sits at the front of the class." },
+    { "malay": "belakang", "english": "back / behind", "exampleSentence": "Tandas di belakang bangunan.", "exampleEnglish": "The toilet is behind the building." },
+    { "malay": "atas", "english": "above / on top", "exampleSentence": "Buku itu di atas meja.", "exampleEnglish": "The book is on the table." },
+    { "malay": "bawah", "english": "below / under", "exampleSentence": "Kucing itu di bawah kerusi.", "exampleEnglish": "The cat is under the chair." },
+    { "malay": "dalam", "english": "inside", "exampleSentence": "Dia berada di dalam bilik.", "exampleEnglish": "He is inside the room." },
+    { "malay": "luar", "english": "outside", "exampleSentence": "Mereka bermain di luar.", "exampleEnglish": "They are playing outside." },
+    { "malay": "dekat", "english": "near / close", "exampleSentence": "Rumah saya dekat dengan sekolah.", "exampleEnglish": "My house is near the school." },
+    { "malay": "jauh", "english": "far", "exampleSentence": "Kampung dia jauh dari sini.", "exampleEnglish": "His village is far from here." },
+    { "malay": "sebelah", "english": "next to / side", "exampleSentence": "Dia duduk di sebelah saya.", "exampleEnglish": "He sits next to me." },
+    { "malay": "sini", "english": "here", "exampleSentence": "Tolong datang sini.", "exampleEnglish": "Please come here." }
+  ]
+}

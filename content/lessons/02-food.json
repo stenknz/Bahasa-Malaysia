@@ -1,0 +1,30 @@
+{
+  "slug": "food-ordering",
+  "title": "Food & Ordering",
+  "description": "Learn how to order food and talk about meals.",
+  "order": 2,
+  "level": "beginner",
+  "sections": {
+    "vocabulary": ["makan", "minum", "nasi", "ayam", "air", "mahu", "tolong", "sedap"],
+    "grammar": {
+      "title": "Politeness with 'Tolong'",
+      "explanation": "'Tolong' means 'please' or 'help' and is placed at the start of a request. 'Mahu' means 'want' and is less formal than 'hendak'.",
+      "examples": [
+        { "malay": "Tolong bagi saya nasi.", "english": "Please give me rice." },
+        { "malay": "Saya mahu air kosong.", "english": "I want plain water." }
+      ]
+    },
+    "dialogue": [
+      { "speaker": "Pelanggan", "malay": "Selamat petang. Saya mahu nasi ayam.", "english": "Good evening. I want chicken rice." },
+      { "speaker": "Pekerja", "malay": "Mahu minum apa?", "english": "What would you like to drink?" },
+      { "speaker": "Pelanggan", "malay": "Air kosong, tolong.", "english": "Plain water, please." },
+      { "speaker": "Pekerja", "malay": "Ada apa-apa lagi?", "english": "Anything else?" },
+      { "speaker": "Pelanggan", "malay": "Itu sahaja. Berapa semuanya?", "english": "That's all. How much is everything?" }
+    ],
+    "exercise": [
+      { "question": "How do you say 'I want chicken rice'?", "options": ["Saya suka nasi ayam", "Saya mahu nasi ayam", "Saya ada nasi ayam", "Saya makan nasi ayam"], "correct": 1 },
+      { "question": "What does 'Tolong' mean in a request?", "options": ["Thank you", "Sorry", "Please", "Help (both)"], "correct": 3 },
+      { "question": "How do you ask for the bill?", "options": ["Berapa harga", "Berapa semuanya", "Tolong bayar", "Mahu bayar"], "correct": 1 }
+    ]
+  }
+}

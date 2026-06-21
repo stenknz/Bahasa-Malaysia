@@ -1,0 +1,23 @@
+{
+  "slug": "pronouns",
+  "title": "Personal Pronouns",
+  "category": "basics",
+  "explanation": "Malay personal pronouns are simpler than English. 'Saya' is used in formal and informal contexts. 'Awak' and 'Kamu' are informal 'you'. 'Dia' covers both 'he' and 'she'.",
+  "rules": [
+    "No gender distinction for third person (dia = he/she)",
+    "'Kita' means 'we' (inclusive, includes listener)",
+    "'Kami' means 'we' (exclusive, excludes listener)",
+    "Plural can be formed by adding 'mereka' or reduplication"
+  ],
+  "examples": [
+    { "malay": "Saya suka kopi.", "english": "I like coffee." },
+    { "malay": "Awak dari mana?", "english": "Where are you from?" },
+    { "malay": "Dia pergi ke pasar.", "english": "He/She goes to the market." },
+    { "malay": "Kami makan bersama.", "english": "We (excl.) eat together." },
+    { "malay": "Kita semua rakyat Malaysia.", "english": "We (incl.) are all Malaysians." }
+  ],
+  "commonMistakes": [
+    { "mistake": "Using 'kita' when you mean 'kami'", "fix": "'Kita' includes the listener, 'kami' excludes them" },
+    { "mistake": "Using 'dia' for plural", "fix": "Use 'mereka' for 'they'" }
+  ]
+}

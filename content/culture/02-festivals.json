@@ -1,0 +1,17 @@
+{
+  "slug": "festivals",
+  "title": "Major Festivals",
+  "category": "celebrations",
+  "content": "Malaysia is multicultural with three major festivals: Hari Raya Aidilfitri (marking end of Ramadan), Chinese New Year, and Deepavali. 'Maaf zahir dan batin' is the apology phrase used during Hari Raya, meaning 'forgive me physically and spiritually'.",
+  "tips": [
+    "Open house is a Malaysian tradition during festivals — anyone is welcome",
+    "Green packets (duit raya) are given during Hari Raya, red packets (ang pao) during CNY",
+    "'Selamat Hari Raya' is the greeting for Eid"
+  ],
+  "phrases": [
+    { "situation": "Eid greeting", "malay": "Selamat Hari Raya", "english": "Happy Eid" },
+    { "situation": "Eid apology phrase", "malay": "Maaf zahir dan batin", "english": "Forgive me (physically and spiritually)" },
+    { "situation": "Chinese New Year", "malay": "Selamat Tahun Baru Cina", "english": "Happy Chinese New Year" },
+    { "situation": "Deepavali", "malay": "Selamat Deepavali", "english": "Happy Deepavali" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "topic": "Kerjaya",
+  "topicEnglish": "Career",
+  "order": 8,
+  "words": [
+    { "malay": "kerja", "english": "work / job", "exampleSentence": "Dia cari kerja baru.", "exampleEnglish": "He is looking for a new job." },
+    { "malay": "gaji", "english": "salary", "exampleSentence": "Gaji saya naik tahun ini.", "exampleEnglish": "My salary increased this year." },
+    { "malay": "bos", "english": "boss", "exampleSentence": "Bos saya sangat baik.", "exampleEnglish": "My boss is very kind." },
+    { "malay": "pekerja", "english": "employee / worker", "exampleSentence": "Ada lima puluh pekerja di sini.", "exampleEnglish": "There are fifty employees here." },
+    { "malay": "mesyuarat", "english": "meeting", "exampleSentence": "Mesyuarat bermula pukul sepuluh.", "exampleEnglish": "The meeting starts at ten." },
+    { "malay": "doktor", "english": "doctor", "exampleSentence": "Doktor memeriksa pesakit.", "exampleEnglish": "The doctor examined the patient." },
+    { "malay": "guru", "english": "teacher", "exampleSentence": "Guru itu mengajar bahasa Melayu.", "exampleEnglish": "The teacher teaches Malay." },
+    { "malay": "jurutera", "english": "engineer", "exampleSentence": "Dia seorang jurutera awam.", "exampleEnglish": "He is a civil engineer." },
+    { "malay": "polis", "english": "police", "exampleSentence": "Polis datang dengan cepat.", "exampleEnglish": "The police came quickly." },
+    { "malay": "peniaga", "english": "businessperson", "exampleSentence": "Dia peniaga yang berjaya.", "exampleEnglish": "She is a successful businessperson." },
+    { "malay": "jadual", "english": "schedule", "exampleSentence": "Saya ada jadual yang sibuk.", "exampleEnglish": "I have a busy schedule." },
+    { "malay": "cuti", "english": "holiday / leave", "exampleSentence": "Saya ambil cuti minggu depan.", "exampleEnglish": "I am taking leave next week." },
+    { "malay": "tugas", "english": "duty / task", "exampleSentence": "Itu tugasan saya setiap hari.", "exampleEnglish": "That is my duty every day." },
+    { "malay": "rajin", "english": "diligent / hardworking", "exampleSentence": "Dia seorang pekerja yang rajin.", "exampleEnglish": "He is a hardworking employee." },
+    { "malay": "malas", "english": "lazy", "exampleSentence": "Jangan malas belajar.", "exampleEnglish": "Don't be lazy to study." },
+    { "malay": "pandai", "english": "clever / skillful", "exampleSentence": "Dia pandai menyanyi.", "exampleEnglish": "She is good at singing." },
+    { "malay": "latihan", "english": "training / practice", "exampleSentence": "Latihan ini sangat berguna.", "exampleEnglish": "This training is very useful." },
+    { "malay": "lulus", "english": "to pass", "exampleSentence": "Dia lulus peperiksaan.", "exampleEnglish": "He passed the exam." },
+    { "malay": "gagal", "english": "to fail", "exampleSentence": "Saya gagal ujian memandu.", "exampleEnglish": "I failed the driving test." },
+    { "malay": "cuba", "english": "to try", "exampleSentence": "Tolong cuba lagi.", "exampleEnglish": "Please try again." }
+  ]
+}
