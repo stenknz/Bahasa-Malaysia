@@ -9,9 +9,15 @@ export async function POST(req: Request) {
   if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { conversationId, content } = await req.json();
+  if (!content || typeof content !== "string") {
+    return NextResponse.json({ error: "Message content is required" }, { status: 400 });
+  }
 
   const conversation = await db.query.conversationSessions.findFirst({
-    where: (c, { eq }) => eq(c.id, conversationId),
+    where: (c, { eq, and }) => and(
+      eq(c.id, conversationId),
+      eq(c.userId, session.user.id!),
+    ),
   });
   if (!conversation) return NextResponse.json({ error: "Not found" }, { status: 404 });
 

@@ -11,7 +11,7 @@ export async function POST(req: Request) {
 
   const result = await askCulture(question);
   if (!result.success) {
-    return NextResponse.json({ answer: "Sorry, I'm having trouble thinking. Please try again." });
+    return NextResponse.json({ answer: "Sorry, I'm having trouble thinking. Please try again." }, { status: 503 });
   }
 
   return NextResponse.json({ answer: result.data });

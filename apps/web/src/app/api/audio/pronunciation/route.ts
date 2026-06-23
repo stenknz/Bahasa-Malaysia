@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
   const result = await analyzePronunciation(expected);
   if (!result.success) {
-    return NextResponse.json({ accuracy: 85, expected });
+    return NextResponse.json({ accuracy: 85, expected }, { status: 503 });
   }
 
   return NextResponse.json({ accuracy: result.data!.accuracy, feedback: result.data!.feedback, expected });
