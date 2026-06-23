@@ -16,6 +16,10 @@ function resolveApiKey(provider: LLMProvider): string {
   return "";
 }
 
+export function getModel(agentName: AIAgentName): string {
+  return agentConfigs[agentName].model;
+}
+
 export function createAgentClient(agentName: AIAgentName): OpenAI {
   const config = agentConfigs[agentName];
   const provider = config.providerPriority.find((p) => {
@@ -26,5 +30,7 @@ export function createAgentClient(agentName: AIAgentName): OpenAI {
   return new OpenAI({
     baseURL: resolveBaseUrl(provider),
     apiKey: resolveApiKey(provider) || "sk-placeholder",
+    timeout: 60000,
+    maxRetries: 2,
   });
 }

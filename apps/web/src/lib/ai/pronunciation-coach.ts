@@ -1,4 +1,4 @@
-import { createAgentClient, SYSTEM_PROMPTS, type AgentResponse } from "@malay/shared";
+import { createAgentClient, getModel, SYSTEM_PROMPTS, type AgentResponse } from "@malay/shared";
 
 export async function analyzePronunciation(targetWord: string): Promise<
   AgentResponse<{ accuracy: number; feedback: string }>
@@ -6,7 +6,7 @@ export async function analyzePronunciation(targetWord: string): Promise<
   try {
     const client = createAgentClient("pronunciation_coach");
     const completion = await client.chat.completions.create({
-      model: "deepseek-v4-flash",
+      model: getModel("pronunciation_coach"),
       messages: [
         { role: "system", content: SYSTEM_PROMPTS.pronunciation_coach },
         { role: "user", content: `Target word: "${targetWord}"` },
@@ -25,7 +25,7 @@ export async function analyzePronunciation(targetWord: string): Promise<
       },
     };
   } catch (err) {
-    console.error("pronunciation_coach error:", err);
+    console.error({ agent: "pronunciation_coach", error: err instanceof Error ? err.message : err, targetWord });
     return { success: false, error: "Failed to analyze pronunciation" };
   }
 }
