@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { db, schema } from "@malay/db";
 import { eq } from "drizzle-orm";
+import { generateReply } from "@/lib/ai";
 
 export async function POST(req: Request) {
   const session = await auth();
@@ -16,8 +17,14 @@ export async function POST(req: Request) {
 
   const messages = [...(conversation.messages as any[]), { role: "user", content, timestamp: new Date().toISOString() }];
 
-  const aiResponse = "Baik. Saya faham. Mari kita teruskan.";
+  const result = await generateReply({
+    scenario: conversation.scenario,
+    level: conversation.level,
+    history: messages.slice(0, -1),
+    userMessage: content,
+  });
 
+  const aiResponse = result.success ? result.data! : "Maaf, saya tak dapat jawab sekarang. Cuba lagi.";
   const updatedMessages = [...messages, { role: "ai", content: aiResponse, timestamp: new Date().toISOString() }];
 
   await db.update(schema.conversationSessions)

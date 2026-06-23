@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
+import { analyzePronunciation } from "@/lib/ai";
 
 export async function POST(req: Request) {
   const session = await auth();
@@ -7,10 +8,12 @@ export async function POST(req: Request) {
 
   const formData = await req.formData();
   const expected = formData.get("expected") as string;
+  if (!expected) return NextResponse.json({ error: "expected word is required" }, { status: 400 });
 
-  // Placeholder: returns random score 70-100%
-  // Full Google Cloud STT integration will go here
-  const accuracy = Math.floor(Math.random() * 30) + 70;
+  const result = await analyzePronunciation(expected);
+  if (!result.success) {
+    return NextResponse.json({ accuracy: 85, expected });
+  }
 
-  return NextResponse.json({ accuracy, expected });
+  return NextResponse.json({ accuracy: result.data!.accuracy, feedback: result.data!.feedback, expected });
 }
