@@ -2,11 +2,6 @@ import OpenAI from "openai";
 import type { AIAgentName, LLMProvider } from "./types";
 import { agentConfigs } from "./agents";
 
-function resolveProvider(): LLMProvider {
-  if (process.env.OPCODE_GO_API_KEY) return "opencode-go";
-  return "ollama";
-}
-
 function resolveBaseUrl(provider: LLMProvider): string {
   if (provider === "opencode-go") {
     return process.env.OPCODE_GO_API_URL ?? "https://opencode.ai/zen/go/v1";
@@ -25,8 +20,8 @@ export function createAgentClient(agentName: AIAgentName): OpenAI {
   const config = agentConfigs[agentName];
   const provider = config.providerPriority.find((p) => {
     if (p === "opencode-go") return !!process.env.OPCODE_GO_API_KEY;
-    return true; // ollama always available as fallback
-  }) ?? "ollama";
+    return true;
+  }) ?? "ollama"; // safety net: ollama always available, even if all providers fail to resolve
 
   return new OpenAI({
     baseURL: resolveBaseUrl(provider),
