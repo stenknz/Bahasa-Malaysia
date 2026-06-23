@@ -16,7 +16,7 @@ export async function POST(req: Request) {
   const conversation = await db.query.conversationSessions.findFirst({
     where: (c, { eq, and }) => and(
       eq(c.id, conversationId),
-      eq(c.userId, session.user.id!),
+      eq(c.userId, session!.user!.id!),
     ),
   });
   if (!conversation) return NextResponse.json({ error: "Not found" }, { status: 404 });
