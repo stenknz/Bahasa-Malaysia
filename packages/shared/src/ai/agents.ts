@@ -1,25 +1,25 @@
 import type { AIAgentName, LLMProvider } from "./types";
 
 interface AgentConfig {
-  model: string;
+  models: Record<LLMProvider, string>;
   providerPriority: LLMProvider[];
 }
 
 export const agentConfigs: Record<AIAgentName, AgentConfig> = {
   grammar_tutor: {
-    model: "deepseek-v4-pro",
+    models: { "opencode-go": "deepseek-v4-pro", ollama: "qwen2.5:14b" },
     providerPriority: ["opencode-go", "ollama"],
   },
   cultural_guide: {
-    model: "deepseek-v4-pro",
+    models: { "opencode-go": "deepseek-v4-pro", ollama: "qwen2.5:14b" },
     providerPriority: ["opencode-go", "ollama"],
   },
   conversation_partner: {
-    model: "deepseek-v4-pro",
+    models: { "opencode-go": "deepseek-v4-pro", ollama: "qwen2.5:14b" },
     providerPriority: ["opencode-go", "ollama"],
   },
   pronunciation_coach: {
-    model: "deepseek-v4-flash",
+    models: { "opencode-go": "deepseek-v4-flash", ollama: "llama3.1:8b" },
     providerPriority: ["opencode-go", "ollama"],
   },
 };

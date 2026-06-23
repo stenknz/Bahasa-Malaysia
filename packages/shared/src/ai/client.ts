@@ -16,16 +16,23 @@ function resolveApiKey(provider: LLMProvider): string {
   return "";
 }
 
+export function resolveProvider(agentName?: AIAgentName): LLMProvider {
+  const config = agentName ? agentConfigs[agentName] : undefined;
+  const priority = config?.providerPriority ?? ["opencode-go", "ollama"];
+  return priority.find((p) => {
+    if (p === "opencode-go") return !!process.env.OPCODE_GO_API_KEY;
+    return true;
+  }) ?? "ollama";
+}
+
 export function getModel(agentName: AIAgentName): string {
-  return agentConfigs[agentName].model;
+  const config = agentConfigs[agentName];
+  const provider = resolveProvider(agentName);
+  return config.models[provider];
 }
 
 export function createAgentClient(agentName: AIAgentName): OpenAI {
-  const config = agentConfigs[agentName];
-  const provider = config.providerPriority.find((p) => {
-    if (p === "opencode-go") return !!process.env.OPCODE_GO_API_KEY;
-    return true;
-  }) ?? "ollama"; // safety net: ollama always available, even if all providers fail to resolve
+  const provider = resolveProvider(agentName);
 
   return new OpenAI({
     baseURL: resolveBaseUrl(provider),
